@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulaire</title>
+</head>
+<body>
+    <h1>Inscription à un événement universitaire</h1>
+
+    <form action="#" method="post">
+
+        <!-- Informations personnelles -->
+        <fieldset>
+            <legend>Informations personnelles</legend>
+
+            <label for="nom">Nom complet :</label><br>
+            <input type="text" id="nom" name="nom" required minlength="3"><br><br>
+
+            <label for="email">Email :</label><br>
+            <input type="email" id="email" name="email"
+                   placeholder="exemple@email.com" required><br><br>
+
+            <label for="date_naissance">Date de naissance :</label><br>
+            <input type="date" id="date_naissance" name="date_naissance"><br><br>
+
+            <label for="telephone">Téléphone :</label><br>
+            <input type="tel" id="telephone" name="telephone"><br><br>
+
+            <label for="motdepasse">Mot de passe :</label><br>
+            <input type="password" id="motdepasse" name="motdepasse"
+                   minlength="8"><br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- Informations académiques -->
+        <fieldset>
+            <legend>Informations académiques</legend>
+
+            <label for="niveau">Niveau d'études :</label><br>
+            <select id="niveau" name="niveau">
+                <option value="L1">L1</option>
+                <option value="L2">L2</option>
+                <option value="L3">L3</option>
+                <option value="Master">Master</option>
+                <option value="Doctorat">Doctorat</option>
+            </select>
+        </fieldset>
+
+        <br>
+
+        <!-- Genre -->
+        <fieldset>
+            <legend>Genre</legend>
+
+            <input type="radio" id="homme" name="genre" value="Homme">
+            <label for="homme">Homme</label>
+
+            <input type="radio" id="femme" name="genre" value="Femme">
+            <label for="femme">Femme</label>
+        </fieldset>
+
+        <br>
+
+        <!-- Centres d’intérêt -->
+        <fieldset>
+            <legend>Centres d'intérêt</legend>
+
+            <input type="checkbox" id="sport" name="interet" value="Sport">
+            <label for="sport">Sport</label><br>
+
+            <input type="checkbox" id="musique" name="interet" value="Musique">
+            <label for="musique">Musique</label><br>
+
+            <input type="checkbox" id="lecture" name="interet" value="Lecture">
+            <label for="lecture">Lecture</label><br>
+
+            <input type="checkbox" id="informatique" name="interet" value="Informatique">
+            <label for="informatique">Informatique</label>
+        </fieldset>
+
+        <br>
+
+        <!-- Message -->
+        <fieldset>
+            <legend>Message libre</legend>
+
+            <label for="message">Votre message :</label><br>
+            <textarea id="message" name="message" rows="5"></textarea>
+        </fieldset>
+
+        <br>
+
+        <!-- Boutons -->
+        <input type="submit" value="S'inscrire">
+        <input type="reset" value="Réinitialiser">
+
+    </form>
+</body>
+</html>

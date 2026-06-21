@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Mame Diarra</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="accueil.HTML">🏠 Accueil</a>
+        <a href="apropos.html">👤 À propos</a>
+        <a href="formation.html">🎓 Formation</a>
+        <a href="competences.html">💻 Compétences</a>
+        <a href="contact.html" class="active">📩 Contact</a>
+    </nav>
+
+    <div class="page">
+        <h1>Me Contacter</h1>
+
+        <!-- Informations de contact -->
+        <div class="carte">
+            <p>📧 diarrandir103@gmail.com</p>
+            <p>📞 +221 701098388</p>
+            <p>📍 Dakar, Sénégal</p>
+        </div>
+
+        <!-- Formulaire -->
+        <h1>Envoyer un message</h1>
+        <div class="carte">
+            <div class="champ">
+                <label>Votre nom</label>
+                <input type="text" id="nom" placeholder="Entrez votre nom">
+            </div>
+            <div class="champ">
+                <label>Votre email</label>
+                <input type="email" id="email" placeholder="Entrez votre email">
+            </div>
+            <div class="champ">
+                <label>Votre message</label>
+                <textarea id="message" placeholder="Écrivez votre message ici..." rows="5"></textarea>
+            </div>
+
+            <!-- Message de confirmation (caché par défaut) -->
+            <div id="confirmation" class="confirmation">
+                ✅ Merci ! Votre message a bien été envoyé !
+            </div>
+
+            <button onclick="envoyerMessage()">📩 Envoyer le message</button>
+        </div>
+    </div>
+
+    <script src="contact.js"></script>
+</body>
+</html>
