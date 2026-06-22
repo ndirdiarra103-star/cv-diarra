@@ -27,6 +27,17 @@
         <p class="description">Bienvenue sur mon portfolio personnel !</p>
         <a href="apropos.html" class="btn">Découvrir mon profil →</a>
     </div>
-
+   <div id="qrcode"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+        <script>
+    new QRCode(document.getElementById("qrcode"), {
+        text: "https://ndirdiarra103-star.github.io/cv-diarra/",
+        width: 150,
+        height: 150
+    });
+</script>
+    <div style="text-align:center; padding:10px;">
+    <button id="btnMode">🌙 Mode Sombre</button>
+</div>
 </body>
 </html>
