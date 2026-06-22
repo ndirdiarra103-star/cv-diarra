@@ -1,18 +1,7 @@
 function imprimerCV() {
   window.print();
 }
-function telechargerCV() {
-  const cv = document.querySelector(".cv");
 
-  const option = {
-    margin: 10,
-    filename: "CV_MAME_DIARRA_NDIR.pdf",
-    Image: { type: "jpeg", quality: 0.98 },
-    html2canavas: { scale: 2 },
-    jsPDF: { unit: "mm", format: "a4", orientation: "landscape" },
-  };
-  html2pdf().set(option).from(cv).save;
-}
 function envoyerMessage() {
   // Récupérer les valeurs
   const nom = document.getElementById("nom").value;
@@ -39,18 +28,40 @@ function envoyerMessage() {
     confirmation.style.display = "none";
   }, 4000);
 }
-const texte =
-  "Je suis une étudiante en Licence Informatique 2, passionnée par le développement web et les nouvelles technologies. J'aime apprendre le HTML et le CSS pour créer de belles pages web.";
-
-let index = 0;
+// Animation machine à écrire
 const element = document.getElementById("texte-anime");
 
-function ecrire() {
-  if (index < texte.length) {
-    element.innerHTML += texte.charAt(index);
-    index++;
-    setTimeout(ecrire, 30);
+if (element) {
+  // vérifie que l'élément existe avant d'écrire
+  const texte =
+    "Je suis une étudiante en Licence Informatique 2, passionnée par le développement web et les nouvelles technologies.";
+  let index = 0;
+
+  function ecrire() {
+    if (index < texte.length) {
+      element.innerHTML += texte.charAt(index);
+      index++;
+      setTimeout(ecrire, 30);
+    }
   }
+  ecrire();
 }
 
-ecrire();
+// Appliquer le mode sauvegardé au chargement
+if (localStorage.getItem("mode") === "sombre") {
+  document.body.classList.add("sombre");
+  document.getElementById("btnMode").textContent = "☀️ Mode Clair";
+}
+
+// Bouton mode sombre
+document.getElementById("btnMode").addEventListener("click", function () {
+  document.body.classList.toggle("sombre");
+
+  if (document.body.classList.contains("sombre")) {
+    this.textContent = "☀️ Mode Clair";
+    localStorage.setItem("mode", "sombre");
+  } else {
+    this.textContent = "🌙 Mode Sombre";
+    localStorage.setItem("mode", "clair");
+  }
+});
